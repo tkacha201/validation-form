@@ -13,32 +13,33 @@
     <form action="/page-for-form handling" method="POST">
       <label for="name">Name</label>
       <input type="text" minlength="20" class="input" name="name" required />
-      <label for="name-slug">Name Slug</label>
+      <label for="name_slug">Name Slug</label>
       <input
         type="text"
         class="input"
-        name="name-slug"
-        pattern="[A-Za-z]"
+        name="name_slug"
+        pattern="^[A-Za-z]+(?:-[A-Za-z]+)*$"
         required
       />
-      <label for="num-of-contributors">Number of contributors</label>
+      <label for="contributors">Number of contributors</label>
       <input
         type="number"
         min="1"
         max="100"
         class="input"
-        name="num-of-contributors"
+        name="contributors"
         required
       />
-      <label for="num-of-branches">Number of branches</label>
+      <label for="max_branches">Number of branches</label>
       <input
         type="number"
         min="1"
         max="100"
         class="input"
-        name="num-of-branches"
+        name="max_branches"
         required
       />
+      <input type="submit" value="Send request" />
     </form>
   </body>
 </html>
